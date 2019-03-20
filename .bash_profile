@@ -6,3 +6,6 @@ alias update_self='source ~/.bash_profile'
 
 ####### GKFX
 alias 'mql4_folder'='cd /Users/andrey.eremin/Library/Application\ Support/com.gkfx.com.app_145951654016175/drive_c/Program\ Files/GKFX\ MetaTrader\ 4/MQL4 && open .'
+
+############ .my-env related
+alias 'update_my_env'="eval 'cd ~/.my-env/ && git pull && update_self && cd -'"
