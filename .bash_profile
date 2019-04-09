@@ -15,4 +15,6 @@ alias 'mql4_folder'='cd /Users/andrey.eremin/Library/Application\ Support/com.gk
 alias 'update_my_env'="eval 'cd ~/.my-env/ && git pull && update_self && cd -'"
 
 ####### Functions
-function killport() { lsof -i TCP:$1 | grep LISTEN | awk '{print $2}' | xargs kill -9 }
+function killport() { 
+  lsof -i TCP:$1 | grep LISTEN | awk '{print $2}' | xargs kill -9 
+}
