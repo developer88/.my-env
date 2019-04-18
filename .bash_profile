@@ -16,5 +16,12 @@ alias 'update_my_env'="eval 'cd ~/.my-env/ && git pull && update_self && cd -'"
 
 ####### Functions
 function killport() { 
+  if [ $# -eq 0 ] || [ $1 = man ] 
+  then
+    echo "Get logs:
+      - \$1 port
+    "
+    return
+  fi   
   lsof -i TCP:$1 | grep LISTEN | awk '{print $2}' | xargs kill -9 
 }
