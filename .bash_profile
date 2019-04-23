@@ -25,3 +25,6 @@ function killport() {
   fi   
   lsof -i TCP:$1 | grep LISTEN | awk '{print $2}' | xargs kill -9 
 }
+
+# Notify that file is loaded
+echo "Loaded .my-env"
