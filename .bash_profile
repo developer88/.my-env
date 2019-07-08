@@ -8,8 +8,26 @@ alias update_self='source ~/.bash_profile'
 alias dk='docker'
 alias dkc='docker-compose'
 
-####### GKFX
-alias 'mql4_folder'='cd /Users/andrey.eremin/Library/Application\ Support/com.gkfx.com.app_145951654016175/drive_c/Program\ Files/GKFX\ MetaTrader\ 4/MQL4 && open .'
+####### Ruby & Co
+alias ruby_server='ruby -run -e httpd . -p 8888'
+alias be='bundle exec '
+alias ber='bundle exec rspec'
+alias rspec_changed='bundle exec rspec $(git status | grep spec | grep "modified: " | cut -d: -f2- | tr "\n" " ")'
+alias rba='rubocop -a'
+
+# RSpec bisect
+# https://relishapp.com/rspec/rspec-core/docs/command-line/bisect
+function bers {
+  if [ $# -ne 0 ] && [ $1 = man ] 
+  then
+    echo "Run RSpec with --bisect argument:
+      - \$1 seed
+      - \$2 path to the file (optional)
+    "
+    return
+  fi 
+  ber --bisect --seed $1 $2
+}
 
 ############ .my-env related
 alias 'update_my_env'="eval 'cd ~/.my-env/ && git pull && update_self && cd -'"
