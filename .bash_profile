@@ -15,6 +15,9 @@ alias ber='bundle exec rspec'
 alias rspec_changed='bundle exec rspec $(git status | grep spec | grep "modified: " | cut -d: -f2- | tr "\n" " ")'
 alias rba='rubocop -a'
 
+####### Other languages
+alias py3='python3'
+
 # RSpec bisect
 # https://relishapp.com/rspec/rspec-core/docs/command-line/bisect
 function bers {
@@ -29,9 +32,6 @@ function bers {
   ber --bisect --seed $1 $2
 }
 
-############ .my-env related
-alias 'update_my_env'="eval 'cd ~/.my-env/ && git pull && update_self && cd -'"
-
 ####### Functions
 function killport() { 
   if [ $# -eq 0 ] || [ $1 = man ] 
@@ -43,6 +43,9 @@ function killport() {
   fi   
   lsof -i TCP:$1 | grep LISTEN | awk '{print $2}' | xargs kill -9 
 }
+
+############ .my-env related
+alias 'update_my_env'="eval 'cd ~/.my-env/ && git pull && update_self && cd -'"
 
 # Notify that file is loaded
 echo "Loaded .my-env"
