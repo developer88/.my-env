@@ -4,6 +4,9 @@ ssh-add ~/.ssh/id_rsa
 alias profile='vim ~/.bash_profile'
 alias update_self='source ~/.bash_profile'
 
+####### Exports & Settings
+export BUNDLER_EDITOR=`which code`
+
 ####### Docker
 alias dk='docker'
 alias dkc='docker-compose'
@@ -17,6 +20,8 @@ alias rba='rubocop -a'
 
 ####### Other languages
 alias py3='python3'
+alias jynote='jupyter notebook'
+alias jylab='jupyter lab'
 
 # RSpec bisect
 # https://relishapp.com/rspec/rspec-core/docs/command-line/bisect
@@ -36,7 +41,7 @@ function bers {
 function killport() { 
   if [ $# -eq 0 ] || [ $1 = man ] 
   then
-    echo "Get logs:
+    echo "Kill port:
       - \$1 port
     "
     return
