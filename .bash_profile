@@ -10,6 +10,8 @@ export BUNDLER_EDITOR=`which code`
 ####### Docker
 alias dk='docker'
 alias dkc='docker-compose'
+alias stop_all_docker='docker ps -a -q | xargs docker rm'
+alias clean_up_docker='docker images -a -q | xargs docker rmi -f'
 
 ####### Ruby & Co
 alias ruby_server='ruby -run -e httpd . -p 8888'
