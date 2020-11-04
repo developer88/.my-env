@@ -25,6 +25,7 @@ alias rba_changed="git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xa
 alias py3='python3'
 alias jynote='jupyter notebook'
 alias jylab='jupyter lab'
+alias update_requirements='pip freeze > requirements.txt'
 
 # RSpec bisect
 # https://relishapp.com/rspec/rspec-core/docs/command-line/bisect
