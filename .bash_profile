@@ -19,6 +19,7 @@ alias be='bundle exec '
 alias ber='bundle exec rspec'
 alias rspec_changed='bundle exec rspec $(git status | grep spec | grep "modified: " | cut -d: -f2- | tr "\n" " ")'
 alias rba='rubocop -a'
+alias rba_changed="git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs bundle exec rubocop -a"
 
 ####### Other languages
 alias py3='python3'
