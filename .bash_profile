@@ -21,7 +21,7 @@ alias rspec_changed='bundle exec rspec $(git status | grep spec | grep "modified
 alias rba='rubocop -a'
 alias rba_changed="git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs bundle exec rubocop -a"
 
-####### Other languages
+####### Python
 alias py3='python3'
 alias jynote='jupyter notebook'
 alias jylab='jupyter lab'
