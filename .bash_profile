@@ -1,5 +1,5 @@
 ####### Global
-ssh-add ~/.ssh/id_rsa
+#ssh-add ~/.ssh/id_rsa
 
 alias profile='vim ~/.bash_profile'
 alias update_self='source ~/.bash_profile'
