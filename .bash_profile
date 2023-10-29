@@ -26,6 +26,7 @@ alias py3='python3'
 alias jynote='jupyter notebook'
 alias jylab='jupyter lab'
 alias update_requirements='pip freeze > requirements.txt'
+alias from_requirements='pip install -r ./requirements.txt'
 
 # RSpec bisect
 # https://relishapp.com/rspec/rspec-core/docs/command-line/bisect
