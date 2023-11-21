@@ -2,8 +2,8 @@
 
 ## Setup
 
-Add this to `~/.bash_profile`
+Add this to `~/.bash_profile` or to `~/.zshrc`
 
 ```bash
-[[ -s "$HOME/.my-env/.bash_profile" ]] && source "$HOME/.my-env/.bash_profile" # Load my configs & envs
+[[ -s "$HOME/.my-env/.my_env" ]] && source "$HOME/.my-env/.my_env" # Load my configs & envs
 ```

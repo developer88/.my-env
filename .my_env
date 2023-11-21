@@ -1,15 +1,16 @@
 ####### Global
-#ssh-add ~/.ssh/id_rsa
 
-alias profile='vim ~/.bash_profile'
-alias update_self='source ~/.bash_profile'
+alias profile='vim ~/.zshrc'
+alias update_self='source ~/.zshrc'
+alias development='cd ~/Documents/Development'
 
 ####### Exports & Settings
 export BUNDLER_EDITOR=`which code`
+alias backup_homebrew=`brew bundle dump`
 
 ####### Docker
 alias dk='docker'
-alias dkc='docker-compose'
+alias dc='docker-compose'
 alias stop_all_docker='docker ps -a -q | xargs docker rm'
 alias clean_up_docker='docker images -a -q | xargs docker rmi -f'
 
