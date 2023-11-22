@@ -6,7 +6,7 @@ alias development='cd ~/Documents/Development'
 
 ####### Exports & Settings
 export BUNDLER_EDITOR=`which code`
-alias backup_homebrew=`brew bundle dump`
+alias backup_homebrew='brew bundle dump'
 
 ####### Docker
 alias dk='docker'
