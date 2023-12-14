@@ -15,6 +15,11 @@ alias dc='docker-compose'
 alias stop_all_docker='docker ps -a -q | xargs docker rm'
 alias clean_up_docker='docker images -a -q | xargs docker rmi -f'
 
+alias lima_reset='sh ~/.my-env/reset-lima.sh'
+alias lima_initialize='sh ~/.my-env/lima-initialise.sh'
+alias lima_remove='sh ~/.my-env/remove-lima.sh'
+alias lima_restart='limactl stop -f && limactl start'
+
 ####### Ruby & Co
 alias ruby_server='ruby -run -e httpd . -p 8888'
 alias be='bundle exec '
