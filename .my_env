@@ -2,7 +2,6 @@
 
 alias profile='vim ~/.zshrc'
 alias update_self='source ~/.zshrc'
-alias development='cd ~/Documents/Development'
 
 ####### Exports & Settings
 export BUNDLER_EDITOR=`which code`
